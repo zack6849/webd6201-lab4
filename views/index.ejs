@@ -5,7 +5,21 @@
 
 <!-- Content Area -->
 <main class="container" id="mainContent">
-<h1><%= title %></h1>
+
+<% if (title == 'Home') { %>
+
+ <%- include ./content/home.ejs %>
+
+<% } else if(title == 'About') { %>
+
+<%- include ./content/about.ejs %>
+
+<% } else if(title == 'Contact') { %>
+
+<%- include ./content/contact.ejs %>
+
+<% } %>
+
 </main> 
 
 
