@@ -1,8 +1,25 @@
+// modules for node and express
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+
+// database setup
+let mongoose = require('mongoose');
+let DB = require('./db');
+
+// point Mongoose to the DB URI
+mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error: '));
+mongoDB.once('open', ()=>{
+  console.log("Connected to MongoDB...");
+});
+mongoDB.once('disconnected', ()=>{
+  console.log("Disconnected from MongoDB...");
+});
 
 // route controllers
 let indexRouter = require('../routes/index');
