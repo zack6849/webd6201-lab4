@@ -20,3 +20,20 @@ module.exports.displayContactList = (req, res, next) =>{
         }
     });
 };
+
+module.exports.performDelete = (req, res, next) => {
+    let id = req.params.id;
+
+    contactModel.remove({_id: id}, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else 
+        {
+            // refresh the contact list
+            res.redirect('/contact-list');
+        }
+    })
+}

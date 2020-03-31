@@ -22,8 +22,11 @@
                     <td class="text-center"><%= contactList[count].firstName %></td>
                     <td class="text-center"><%= contactList[count].lastName %></td>
                     <td class="text-center"><%= contactList[count].contactNumber %></td>
-                    <td></td>
-                    <td></td>
+                    <td class="text-center"></td>
+                    <td class="text-center">
+                        <a href="/contact-list/delete/<%= contactList[count]._id %>"
+                        class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+                    </td>
                 </tr>
                 <% } %>
             </table>
