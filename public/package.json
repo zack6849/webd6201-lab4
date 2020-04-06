@@ -1,5 +1,5 @@
 {
-  "name": "webd6201-w2020-lesson10",
+  "name": "webd6201-lab4-jamesk",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,5 +7,14 @@
     "@fortawesome/fontawesome-free": "^5.12.1",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha",
+    "postinstall": "bower install && grunt build"
+  },
+  "engines": {
+    "node": "^12.0.0",
+    "npm": "^6.0.0"
   }
 }
