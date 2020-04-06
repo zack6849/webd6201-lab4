@@ -27,9 +27,9 @@ router.get('/contact', (req, res, next) =>
 });
 
 /* GET products page */
-router.get('/products', (req, res, next) =>
+router.get('/projects', (req, res, next) =>
   {
-    controllers.displayProducts(res);
+    controllers.displayProjects(res);
 });
 
 /* GET services page */
