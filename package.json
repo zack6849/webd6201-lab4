@@ -5,7 +5,6 @@
   "scripts": {
     "start": "node server.js",
     "test": "mocha",
-    "postinstall": "grunt build"
   },
   "engines": {
     "node": "^12.0.0",
