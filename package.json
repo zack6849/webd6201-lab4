@@ -5,14 +5,13 @@
   "scripts": {
     "start": "node server.js",
     "test": "mocha",
-    "postinstall": "bower install && grunt build"
+    "postinstall": "grunt build"
   },
   "engines": {
     "node": "^12.0.0",
     "npm": "^6.0.0"
   },
   "dependencies": {
-    "bower": "^1.8.8",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
